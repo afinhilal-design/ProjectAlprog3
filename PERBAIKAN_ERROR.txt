@@ -1,0 +1,18 @@
+ProjectAlprog3 sudah diperbaiki.
+
+Perbaikan utama:
+1. App.xaml sebelumnya berisi kode C#, sekarang sudah dikembalikan menjadi XAML Application yang benar.
+2. App.xaml.cs sebelumnya salah berisi HistoryPage, sekarang sudah berisi class App.
+3. MauiProgram.cs sebelumnya salah berisi MainPage, sekarang sudah berisi CreateMauiApp().
+4. MainPage.xaml.cs sebelumnya masih kode template CounterBtn, sekarang sudah sesuai tombol login.
+5. RegisterPage.xaml.cs sebelumnya salah berisi class App, sekarang sudah berisi scan wajah, simpan akun, dan kembali login.
+6. Event tombol di XAML sudah dibuatkan handler C# yang cocok.
+
+Cara pakai:
+1. Ekstrak ZIP ini.
+2. Buka ProjectAlprog3.csproj di Visual Studio.
+3. Pilih target Android/Windows.
+4. Clean Solution, lalu Rebuild Solution.
+
+Catatan:
+Jika Visual Studio belum mendukung .NET 10, ubah TargetFrameworks di ProjectAlprog3.csproj dari net10.0-* ke versi .NET MAUI yang terpasang di laptop.

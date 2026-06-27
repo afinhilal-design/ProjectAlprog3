@@ -1,0 +1,25 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectAlprog3.FaceVerificationPage"
+             BackgroundColor="#0A0E1A">
+    <VerticalStackLayout Padding="28" Spacing="14" WidthRequest="450" HorizontalOptions="Center" VerticalOptions="Center">
+        <Label x:Name="LabelTitle" Text="🔍 Verifikasi Identitas" FontSize="24" FontAttributes="Bold" TextColor="#E2E8F0" HorizontalOptions="Center" />
+        <Label Text="Scan wajah diperlukan sebelum masuk dashboard" TextColor="#94A3B8" HorizontalOptions="Center" />
+        <Label Text="Minimal kemiripan: 85%" TextColor="#10B981" HorizontalOptions="Center" />
+
+        <Frame HeightRequest="280" Padding="0" CornerRadius="14" BackgroundColor="#111827" IsClippedToBounds="True">
+            <Grid>
+                <Image x:Name="ScanPreview" Aspect="AspectFill" />
+                <Label x:Name="ScanText" Text="📷\nTekan tombol scan" TextColor="#64748B" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center" />
+            </Grid>
+        </Frame>
+
+        <ProgressBar x:Name="SimilarityBar" Progress="0" ProgressColor="#10B981" />
+        <Label x:Name="LabelSimilarity" Text="Kemiripan: 0%" TextColor="#E2E8F0" HorizontalOptions="Center" />
+
+        <Button Text="🔍 SCAN DAN VERIFIKASI WAJAH" BackgroundColor="#10B981" TextColor="White" FontAttributes="Bold" Clicked="OnVerifyClicked" />
+        <Button x:Name="BtnDashboard" Text="✅ AKSES DITERIMA - MASUK DASHBOARD" IsVisible="False" BackgroundColor="#3B82F6" TextColor="White" FontAttributes="Bold" Clicked="OnDashboardClicked" />
+        <Button Text="← Batal" BackgroundColor="Transparent" TextColor="#EF4444" Clicked="OnCancelClicked" />
+    </VerticalStackLayout>
+</ContentPage>
+

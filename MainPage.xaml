@@ -1,0 +1,29 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectAlprog3.MainPage"
+             BackgroundColor="#0A0E1A">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#0A0E1A" Offset="0" />
+                <GradientStop Color="#10213A" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Frame BackgroundColor="#1A2238" CornerRadius="22" Padding="32" HasShadow="True"
+               WidthRequest="420" HorizontalOptions="Center" VerticalOptions="Center">
+            <VerticalStackLayout Spacing="16">
+                <Label Text="🩺 GlucoScan AI" FontSize="30" FontAttributes="Bold" TextColor="#E2E8F0" HorizontalOptions="Center" />
+                <Label Text="Sistem Monitoring Gula Darah Non-Invasive" TextColor="#94A3B8" HorizontalOptions="Center" />
+
+                <Entry x:Name="EntryUsername" Placeholder="Username" BackgroundColor="#0F172A" TextColor="White" PlaceholderColor="#64748B" />
+                <Entry x:Name="EntryPassword" Placeholder="Password" IsPassword="True" BackgroundColor="#0F172A" TextColor="White" PlaceholderColor="#64748B" />
+
+                <Button Text="🔐 MASUK SISTEM" BackgroundColor="#3B82F6" TextColor="White" FontAttributes="Bold" Clicked="OnLoginClicked" />
+                <Button Text="Belum punya akun? Daftar di sini" BackgroundColor="Transparent" TextColor="#60A5FA" Clicked="OnGoToRegisterClicked" />
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
+
+

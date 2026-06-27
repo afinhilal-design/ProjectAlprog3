@@ -1,0 +1,59 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectAlprog3.InputDataPage"
+             BackgroundColor="#0A0E1A">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="10">
+            <Label Text="📝 Input Data Pasien" FontSize="26" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Label Text="Masukkan data non-invasive. Keterangan di bawah setiap input membantu saat ujian agar dosen paham fungsi tiap parameter." TextColor="#94A3B8" />
+
+            <Label Text="Denyut Nadi / Heart Rate (bpm)" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Entry x:Name="HeartRateEntry" Placeholder="Contoh 75" Keyboard="Numeric" BackgroundColor="#1A2238" TextColor="White" PlaceholderColor="#64748B" />
+            <Label Text="Keterangan: jumlah detak jantung per menit. Nilai normal orang dewasa saat istirahat umumnya 60–100 bpm." FontSize="12" TextColor="#94A3B8" />
+
+            <Label Text="SpO₂ (%)" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Entry x:Name="Spo2Entry" Placeholder="Contoh 98" Keyboard="Numeric" BackgroundColor="#1A2238" TextColor="White" PlaceholderColor="#64748B" />
+            <Label Text="Keterangan: kadar oksigen dalam darah. Nilai normal umumnya 95–100%." FontSize="12" TextColor="#94A3B8" />
+
+            <Label Text="Suhu Tubuh (°C)" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Entry x:Name="TempEntry" Placeholder="Contoh 36.5" Keyboard="Numeric" BackgroundColor="#1A2238" TextColor="White" PlaceholderColor="#64748B" />
+            <Label Text="Keterangan: suhu tubuh sebagai parameter pendukung kondisi fisiologis. Nilai normal sekitar 36–37,5 °C." FontSize="12" TextColor="#94A3B8" />
+
+            <Label Text="Tekanan Darah Sistolik (mmHg)" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Entry x:Name="SystolicEntry" Placeholder="Contoh 120" Keyboard="Numeric" BackgroundColor="#1A2238" TextColor="White" PlaceholderColor="#64748B" />
+            <Label Text="Keterangan: tekanan darah saat jantung memompa darah. Contoh 120/80, maka 120 adalah sistolik." FontSize="12" TextColor="#94A3B8" />
+
+            <Label Text="Tekanan Darah Diastolik (mmHg)" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Entry x:Name="DiastolicEntry" Placeholder="Contoh 80" Keyboard="Numeric" BackgroundColor="#1A2238" TextColor="White" PlaceholderColor="#64748B" />
+            <Label Text="Keterangan: tekanan darah saat jantung beristirahat di antara denyut. Contoh 120/80, maka 80 adalah diastolik." FontSize="12" TextColor="#94A3B8" />
+
+            <Label Text="Usia" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Entry x:Name="AgeEntry" Placeholder="Contoh 35" Keyboard="Numeric" BackgroundColor="#1A2238" TextColor="White" PlaceholderColor="#64748B" />
+            <Label Text="Keterangan: usia menjadi faktor risiko karena risiko diabetes dapat meningkat seiring bertambahnya umur." FontSize="12" TextColor="#94A3B8" />
+
+            <Label Text="BMI / Indeks Massa Tubuh" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Entry x:Name="BmiEntry" Placeholder="Contoh 24.5" Keyboard="Numeric" BackgroundColor="#1A2238" TextColor="White" PlaceholderColor="#64748B" />
+            <Label Text="Keterangan: BMI digunakan untuk memperkirakan status berat badan. BMI tinggi/obesitas dapat menjadi faktor risiko diabetes." FontSize="12" TextColor="#94A3B8" />
+
+            <Label Text="NIR Reflectance" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Entry x:Name="NirEntry" Placeholder="0.1 - 1.0, contoh 0.65" Keyboard="Numeric" BackgroundColor="#1A2238" TextColor="White" PlaceholderColor="#64748B" />
+            <Label Text="Keterangan: data pantulan cahaya Near Infrared sebagai input optik non-invasive untuk estimasi perubahan fisiologis." FontSize="12" TextColor="#94A3B8" />
+
+            <Label Text="PPG Peak Amplitude" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Entry x:Name="PpgEntry" Placeholder="0.1 - 1.0, contoh 0.72" Keyboard="Numeric" BackgroundColor="#1A2238" TextColor="White" PlaceholderColor="#64748B" />
+            <Label Text="Keterangan: sinyal PPG berasal dari perubahan volume darah. Digunakan bersama NIR sebagai masukan non-invasive." FontSize="12" TextColor="#94A3B8" />
+
+            <Label Text="Riwayat Keluarga Diabetes" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Picker x:Name="FamilyPicker" Title="Pilih Ya/Tidak" BackgroundColor="#1A2238" TextColor="White" TitleColor="#94A3B8">
+                <Picker.Items>
+                    <x:String>Tidak</x:String>
+                    <x:String>Ya</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Keterangan: digunakan sebagai faktor risiko tambahan dalam Decision Tree, Neural Network, dan Fuzzy Logic." FontSize="12" TextColor="#94A3B8" />
+
+            <Button Text="🚀 JALANKAN ANALISIS AI" BackgroundColor="#10B981" TextColor="White" FontAttributes="Bold" Clicked="OnAnalyzeClicked" />
+            <Button Text="← Kembali Dashboard" BackgroundColor="Transparent" TextColor="#60A5FA" Clicked="OnBackClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

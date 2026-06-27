@@ -1,0 +1,46 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectAlprog3.AIResultPage"
+             BackgroundColor="#0A0E1A">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="14">
+            <Label Text="🤖 Hasil Analisis AI/ML" FontSize="26" FontAttributes="Bold" TextColor="#E2E8F0" />
+
+            <Frame BackgroundColor="#1A2238" CornerRadius="14">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Estimasi Glukosa" TextColor="#94A3B8" />
+                    <Label x:Name="LabelGlucose" Text="- mg/dL" FontSize="30" FontAttributes="Bold" TextColor="#60A5FA" />
+                    <Label x:Name="LabelFinal" Text="Risiko: -" FontSize="22" FontAttributes="Bold" TextColor="#F59E0B" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#1A2238" CornerRadius="14">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="🌳 Decision Tree" FontAttributes="Bold" TextColor="#E2E8F0" />
+                    <Label x:Name="LabelDT" Text="-" TextColor="#CBD5E1" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#1A2238" CornerRadius="14">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="🧠 Neural Network MLP 9-12-6-3" FontAttributes="Bold" TextColor="#E2E8F0" />
+                    <Label x:Name="LabelNN" Text="-" TextColor="#CBD5E1" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#1A2238" CornerRadius="14">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="🌊 Fuzzy Logic Mamdani" FontAttributes="Bold" TextColor="#E2E8F0" />
+                    <Label x:Name="LabelFuzzy" Text="-" TextColor="#CBD5E1" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#10213A" CornerRadius="14">
+                <Label x:Name="LabelRecommendation" Text="-" TextColor="#E2E8F0" />
+            </Frame>
+
+            <Button Text="📝 Input Data Lagi" BackgroundColor="#10B981" TextColor="White" FontAttributes="Bold" Clicked="OnInputClicked" />
+            <Button Text="← Dashboard" BackgroundColor="Transparent" TextColor="#60A5FA" Clicked="OnBackClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

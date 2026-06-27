@@ -1,0 +1,59 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectAlprog3.MainDashboardPage"
+             BackgroundColor="#0A0E1A">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout>
+                    <Label Text="🩺 GlucoScan AI Dashboard" FontSize="28" FontAttributes="Bold" TextColor="#E2E8F0" />
+                    <Label x:Name="LabelUser" Text="User" TextColor="#94A3B8" />
+                </VerticalStackLayout>
+                <Button Grid.Column="1" Text="Keluar" BackgroundColor="#EF4444" TextColor="White" Clicked="OnLogoutClicked" />
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="12" RowSpacing="12">
+                <Frame BackgroundColor="#1A2238" CornerRadius="14">
+                    <VerticalStackLayout>
+                        <Label Text="Gula Darah Terakhir" TextColor="#94A3B8"/>
+                        <Label x:Name="LabelGlucose" Text="- mg/dL" FontSize="24" FontAttributes="Bold" TextColor="#60A5FA"/>
+                    </VerticalStackLayout>
+                </Frame>
+                <Frame Grid.Column="1" BackgroundColor="#1A2238" CornerRadius="14">
+                    <VerticalStackLayout>
+                        <Label Text="Total Pemeriksaan" TextColor="#94A3B8"/>
+                        <Label x:Name="LabelTotal" Text="0" FontSize="24" FontAttributes="Bold" TextColor="#10B981"/>
+                    </VerticalStackLayout>
+                </Frame>
+                <Frame Grid.Row="1" BackgroundColor="#1A2238" CornerRadius="14">
+                    <VerticalStackLayout>
+                        <Label Text="Risiko Terakhir" TextColor="#94A3B8"/>
+                        <Label x:Name="LabelRisk" Text="-" FontSize="24" FontAttributes="Bold" TextColor="#F59E0B"/>
+                    </VerticalStackLayout>
+                </Frame>
+                <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="#1A2238" CornerRadius="14">
+                    <VerticalStackLayout>
+                        <Label Text="Akurasi AI Combined" TextColor="#94A3B8"/>
+                        <Label Text="94.7%" FontSize="24" FontAttributes="Bold" TextColor="#A78BFA"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
+
+            <Button Text="📝 Input Data Pasien" BackgroundColor="#3B82F6" TextColor="White" FontAttributes="Bold" Clicked="OnInputClicked" />
+            <Button Text="🤖 Lihat Hasil AI Terakhir" BackgroundColor="#8B5CF6" TextColor="White" FontAttributes="Bold" Clicked="OnAIResultClicked" />
+            <Button Text="📋 Riwayat Pemeriksaan" BackgroundColor="#0EA5E9" TextColor="White" FontAttributes="Bold" Clicked="OnHistoryClicked" />
+            <Button Text="💬 AI / NLP Assistant" BackgroundColor="#F59E0B" TextColor="White" FontAttributes="Bold" Clicked="OnAiAssistantClicked" />
+            <Button Text="📤 Export Data Uji CSV" BackgroundColor="#10B981" TextColor="White" FontAttributes="Bold" Clicked="OnExportClicked" />
+
+            <Frame BackgroundColor="#1A2238" CornerRadius="14">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Algoritma Sistem" FontSize="18" FontAttributes="Bold" TextColor="#E2E8F0" />
+                    <Label Text="🌳 Decision Tree: klasifikasi risiko berdasarkan aturan glukosa, BMI, usia, dan riwayat keluarga." TextColor="#CBD5E1" />
+                    <Label Text="🧠 Neural Network: MLP 9-12-6-3 untuk mengolah 9 fitur input menjadi 3 kelas risiko." TextColor="#CBD5E1" />
+                    <Label Text="🌊 Fuzzy Logic: Mamdani untuk menangani data yang tidak pasti seperti NIR, PPG, dan BMI." TextColor="#CBD5E1" />
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+

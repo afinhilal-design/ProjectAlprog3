@@ -1,0 +1,29 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectAlprog3.AiAssistantPage"
+             BackgroundColor="#0A0E1A">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="14">
+            <Label Text="💬 Chatbot / NLP Assistant" FontSize="26" FontAttributes="Bold" TextColor="#E2E8F0" />
+            <Label Text="Tanyakan arti hasil prediksi, suhu, nadi, tekanan darah, BMI, NIR, PPG, atau saran sederhana untuk kesehatan." TextColor="#94A3B8" />
+
+            <Editor x:Name="QuestionEditor"
+                    Placeholder="Contoh: Risiko saya sedang, artinya apa?"
+                    HeightRequest="130"
+                    BackgroundColor="#1A2238"
+                    TextColor="White"
+                    PlaceholderColor="#64748B" />
+
+            <Button Text="Tanya AI" BackgroundColor="#8B5CF6" TextColor="White" FontAttributes="Bold" Clicked="OnAskClicked" />
+
+            <Frame BackgroundColor="#1A2238" CornerRadius="14">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Jawaban AI" FontAttributes="Bold" TextColor="#E2E8F0" />
+                    <Label x:Name="AnswerLabel" Text="Jawaban akan muncul di sini." TextColor="#CBD5E1" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="← Dashboard" BackgroundColor="Transparent" TextColor="#60A5FA" Clicked="OnBackClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

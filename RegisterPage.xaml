@@ -1,0 +1,28 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectAlprog3.RegisterPage"
+             BackgroundColor="#0A0E1A">
+    <ScrollView>
+        <VerticalStackLayout Padding="28" Spacing="14" WidthRequest="430" HorizontalOptions="Center">
+            <Label Text="👤 Registrasi Akun" FontSize="26" FontAttributes="Bold" TextColor="#E2E8F0" HorizontalOptions="Center" />
+            <Label Text="Buat akun dan scan wajah awal" TextColor="#94A3B8" HorizontalOptions="Center" />
+
+            <Entry x:Name="EntryUsername" Placeholder="Buat username" BackgroundColor="#1A2238" TextColor="White" PlaceholderColor="#64748B" />
+            <Entry x:Name="EntryPassword" Placeholder="Buat password" IsPassword="True" BackgroundColor="#1A2238" TextColor="White" PlaceholderColor="#64748B" />
+            <Picker x:Name="PickerRole" Title="Pilih role" BackgroundColor="#1A2238" TextColor="White" TitleColor="#94A3B8" />
+
+            <Label Text="Scan Wajah untuk Database" TextColor="#E2E8F0" FontAttributes="Bold" />
+            <Frame HeightRequest="230" Padding="0" CornerRadius="14" BackgroundColor="#111827" IsClippedToBounds="True">
+                <Grid>
+                    <Image x:Name="FacePreview" Aspect="AspectFill" />
+                    <Label x:Name="PlaceholderLabel" Text="📷\nTekan tombol scan wajah" TextColor="#64748B" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center" />
+                </Grid>
+            </Frame>
+
+            <Button Text="📷 SCAN WAJAH DENGAN KAMERA" BackgroundColor="#F59E0B" TextColor="White" FontAttributes="Bold" Clicked="OnScanFaceClicked" />
+            <Button Text="✅ SIMPAN DAN DAFTARKAN" BackgroundColor="#10B981" TextColor="White" FontAttributes="Bold" Clicked="OnRegisterClicked" />
+            <Button Text="← Kembali ke Login" BackgroundColor="Transparent" TextColor="#60A5FA" Clicked="OnBackClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
